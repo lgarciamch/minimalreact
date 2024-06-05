@@ -33,6 +33,23 @@ function Load() {
 
                     const data = await response.json();
                     setProperties(data);
+                //console.log("Response received:", response);
+
+                /*                 
+                if (response.type === 'opaqueredirect') {
+                    // Manejar redirección de manera transparente
+                    window.location.href = response.url;
+                    return;
+                }
+
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch data: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                console.log("Data received:", data);
+                setProperties(data); 
+                */
 
             } catch (error) {
                 console.error('Error fetching properties:', error);
